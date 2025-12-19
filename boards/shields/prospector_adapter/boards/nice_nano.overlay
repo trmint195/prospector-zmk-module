@@ -118,6 +118,12 @@ disp_spi: &spi3 {
     };
 };
 
+/ {
+    aliases {
+    light-sensor = &bh1750;
+};
+}
+
 &pwm1 {
   status = "okay";
   pinctrl-0 = <&pwm1_default>;
