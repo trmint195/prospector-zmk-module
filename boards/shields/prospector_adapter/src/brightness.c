@@ -85,7 +85,7 @@ extern void als_thread(void *d0, void *d1, void *d2) {
     struct sensor_value intensity;
     uint8_t mapped_brightness;
 
-    dev = DEVICE_DT_GET_ONE(avago_apds9960);
+    dev = DEVICE_DT_GET_ONE(rohm_bh1750);
     if (!device_is_ready(dev)) {
         printk("sensor: device not ready.\n");
     }

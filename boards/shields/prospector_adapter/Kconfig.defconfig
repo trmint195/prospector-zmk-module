@@ -62,6 +62,6 @@ config LED
 
 config PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
     select SENSOR
-    select APDS9960
+    select BH1750
 
 endif
