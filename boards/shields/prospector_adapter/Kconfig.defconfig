@@ -56,7 +56,26 @@ config LED
     default y
 
 config PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
-    select SENSOR
-    select APDS9960
+    bool "Enable Ambient Light Sensor"
+	default y
+	select SENSOR
+
+if PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
+
+choice PROSPECTOR_AMBIENT_LIGHT_SENSOR_TYPE
+	prompt "Ambient Light Sensor Type"
+	default PROSPECTOR_USE_APDS9960
+
+config PROSPECTOR_USE_APDS9960
+	bool "APDS9960 Sensor"
+	select APDS9960
+
+config PROSPECTOR_USE_BH1750
+	bool "BH1750 Sensor"
+	select BH1750
+
+endchoice
+
+endif
 
 endif

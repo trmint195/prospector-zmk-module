@@ -103,9 +103,11 @@ CONFIG_PROSPECTOR_FIXED_BRIGHTNESS=80
 | Name | Description | Default |
 | ---- | ----------- | ------- |
 | `CONFIG_PROSPECTOR_ROTATE_DISPLAY_180` | Rotate the display 180 degrees | n |
-| `CONFIG_PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR` | Use ambient light sensor for auto brightness | y |
-| `CONFIG_PROSPECTOR_FIXED_BRIGHTNESS` | Fixed display brightness when not using ambient light sensor | 50 (1-100) |
 | `CONFIG_PROSPECTOR_LAYER_NAME_UPPERCASE` | Convert layer names to uppercase (Operator and Radii only) | y |
+| `CONFIG_PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR` | Use ambient light sensor for auto brightness | y |
+| `CONFIG_PROSPECTOR_USE_APDS9960`    | Select APDS9960 as the ambient light sensor type(default)  | y    |
+| `CONFIG_PROSPECTOR_USE_BH1750`   | Select BH1750 as the ambient light sensor type    | n |
+| `CONFIG_PROSPECTOR_FIXED_BRIGHTNESS` | Fixed display brightness when not using ambient light sensor | 50 (1-100) |
 
 ### Modifiers
 | Name | Description | Default |
