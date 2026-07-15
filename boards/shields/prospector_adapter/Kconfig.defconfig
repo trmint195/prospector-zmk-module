@@ -62,19 +62,21 @@ config PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
 
 if PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
 
-choice PROSPECTOR_AMBIENT_LIGHT_SENSOR_TYPE
-	prompt "Ambient Light Sensor Type"
-	default PROSPECTOR_USE_APDS9960
-
 config PROSPECTOR_USE_APDS9960
 	bool "APDS9960 Sensor"
+	default y
+	depends on !PROSPECTOR_USE_BH1750
 	select APDS9960
+	help
+	  Use APDS9960. This option is disabled if BH1750 is selected.
 
 config PROSPECTOR_USE_BH1750
 	bool "BH1750 Sensor"
+	default n
+	depends on !PROSPECTOR_USE_APDS9960
 	select BH1750
-
-endchoice
+	help
+	  Use BH1750. This option is disabled if APDS9960 is selected.
 
 endif
 
